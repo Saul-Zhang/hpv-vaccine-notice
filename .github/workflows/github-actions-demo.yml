@@ -2,7 +2,7 @@ name: hpv vaccine notice
 on:
   push:
   schedule:
-    - cron:  '0 0 0/1 * * *'
+    - cron:  '0 0 0/1 * *'
 jobs:
   hpv-vaccine-notice:
     runs-on: ubuntu-latest
