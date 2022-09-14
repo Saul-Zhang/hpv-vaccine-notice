@@ -1,8 +1,8 @@
 name: hpv vaccine notice
-on: [push]
-# on:
-#   schedule:
-#     - cron: '0 3 * * *'
+# on: [push]
+on:
+  schedule:
+    - cron: '0 0/12 * * *'
 jobs:
   hpv-vaccine-notice:
     runs-on: ubuntu-latest
