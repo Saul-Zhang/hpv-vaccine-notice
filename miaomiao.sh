@@ -12,7 +12,7 @@ RESULT=$(curl \
   -s \
   https://miaomiao.scmttec.com/seckill/seckill/list.do?offset=0&limit=10&regionCode=4201)
 
-if [ ${#RESULT} -eq "48" ];then
+if [ ${#RESULT} -eq "49" ];then
   echo "nothing"
 else
 echo $RESULT
