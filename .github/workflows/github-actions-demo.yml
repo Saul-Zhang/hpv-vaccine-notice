@@ -25,7 +25,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: hpv vaccine notice
-          body: file://result.html
+          body: ${{env.RESULT_SHELL}}
           to: 1358995237@qq.com
           from: GitHub Actions
           content_type: text/html
