@@ -10,7 +10,7 @@ RESULT=$(curl \
   -H "Accept-Language: $LANGUAGE" \
   -H "User-Agent: $UA" \
   -s \
-  https://miaomiao.scmttec.com/seckill/seckill/list.do?offset=0&limit=10&regionCode=4201)
+  https://miaomiao.scmttec.com/seckill/seckill/list.do?offset\=0\&limit=10\&regionCode\=4201)
 
 if [ ${#RESULT} -eq "49" ];then
   echo "nothing"
