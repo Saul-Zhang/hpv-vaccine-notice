@@ -6,8 +6,15 @@ LANGUAGE="zh-CN"
 UNIT=m
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
 
-curl \
+RESULT=$(curl \
   -H "Accept-Language: $LANGUAGE" \
   -H "User-Agent: $UA" \
-  -o result.html \
-  https://miaomiao.scmttec.com/seckill/seckill/list.do?offset=0&limit=10&regionCode=4201
+  -s \
+  https://miaomiao.scmttec.com/seckill/seckill/list.do?offset=0&limit=10&regionCode=4201)
+
+if [ ${#RESULT} -eq "49" ];then
+  echo "nothing"
+else
+echo $RESULT
+fi
+
