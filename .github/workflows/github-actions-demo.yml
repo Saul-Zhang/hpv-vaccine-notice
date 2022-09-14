@@ -12,7 +12,7 @@ jobs:
       - name: 'Checkout codes'
         uses: actions/checkout@v3
       - name: 'Run script '
-        run: bash ./miaomiao.sh > $env.RESULT_SHELL
+        run: bash ./miaomiao.sh > ${{ env.RESULT_SHELL }}
       # 使用现成的发送邮箱的GitHub action来发送邮件
       - name: 'get result'
         run: echo ${{env.RESULT_SHELL}}
@@ -27,7 +27,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: hpv vaccine notice
-          body: ${{env.RESULT_SHELL}}
+          body: ${{ env.RESULT_SHELL }}
           to: 1358995237@qq.com
           from: GitHub Actions
           content_type: text/html
