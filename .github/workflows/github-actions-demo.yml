@@ -12,11 +12,11 @@ jobs:
       - name: 'Checkout codes'
         uses: actions/checkout@v3
       - name: 'Run script '
-        run: bash ./miaomiao.sh > $RESULT_SHELL
+        run: bash ./miaomiao.sh > $env.RESULT_SHELL
       # 使用现成的发送邮箱的GitHub action来发送邮件
       - name: 'get result'
         run: echo ${{env.RESULT_SHELL}}
-      - name: 'Send mail':
+      - name: 'Send mail'
         if: ${{ env.RESULT_SHELL != 'nothing' }}
         uses: dawidd6/action-send-mail@master
         with:
